@@ -59,4 +59,42 @@ func main() {
 	fmt.Println("Infer Type:", reflect.TypeOf(value))
 
 	fmt.Println("---------------------------------------------------")
+
+	var array [4]string
+	array[0] = "0"
+	array[1] = "1"
+	array[2] = "2"
+	array[3] = "3"
+
+	fmt.Println("Array Value:", array)
+	fmt.Println("Type Of:", reflect.TypeOf(array))
+
+	fmt.Println("---------------------------------------------------")
+
+	list := []string{"0", "1", "2", "3"}
+	list = append(list, "4")
+
+	fmt.Println("Slice Value:", list)
+	fmt.Println("Type Of:", reflect.TypeOf(list))
+
+	fmt.Println("---------------------------------------------------")
+
+	var slices []int
+
+	for i := 0; i < 10; i++ {
+
+		fmt.Println("Slice Value:", slices)
+		fmt.Println("Type Of:", reflect.TypeOf(slices))
+		fmt.Println("Length:", len(slices))
+		fmt.Println("Capacity:", cap(slices))
+
+		slices = append(slices, i)
+
+		fmt.Println()
+	}
+
+	// o slice aumenta a capacidade de acordo com o tamanho do ultimo length
+	// ele não aumenta a capacidade de acordo com o valor que foi iniciado
+
+	fmt.Println("---------------------------------------------------")
 }
