@@ -97,4 +97,25 @@ func main() {
 	// ele não aumenta a capacidade de acordo com o valor que foi iniciado
 
 	fmt.Println("---------------------------------------------------")
+
+	var (
+		firstName string
+		lastName  string
+		old       int
+	)
+
+	firstName = "Airton"
+	lastName = "Tonello"
+	old = 29
+
+	fmt.Println(firstName, lastName, old)
+
+	fmt.Println("---------------------------------------------------")
+
+	// null, igual delphi
+	var empty *string = nil
+
+	fmt.Println(empty)
+
+	fmt.Println("---------------------------------------------------")
 }
